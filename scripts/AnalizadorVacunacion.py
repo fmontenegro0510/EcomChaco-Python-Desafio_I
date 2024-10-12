@@ -12,6 +12,7 @@ class AnalizadorVacunacion:
             reader = csv.DictReader(file)
             for row in reader:
                 datos.append(row)
+                print(row)
         return datos
 
     def validar_datos(self):
@@ -27,6 +28,7 @@ class AnalizadorVacunacion:
         pass
 
 if __name__ == "__main__":
-    analizador = AnalizadorVacunacion('modelo_muestra.csv')
+    ruta = os.path.join(os.getcwd(), 'data/modelo_muestra.csv')
+    analizador = AnalizadorVacunacion(ruta)
     analizador.validar_datos()
 

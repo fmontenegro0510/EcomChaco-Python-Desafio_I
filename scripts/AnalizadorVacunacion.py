@@ -27,6 +27,6 @@ class AnalizadorVacunacion:
         pass
 
 if __name__ == "__main__":
-    analizador = AnalizadorVacunacion('../data/modelo_muestra.csv')
+    analizador = AnalizadorVacunacion('modelo_muestra.csv')
     analizador.validar_datos()
 
